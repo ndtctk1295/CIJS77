@@ -132,68 +132,78 @@ class RegisterPage extends React.Component {
       <>
         <h1>Register</h1>
         <form onSubmit={this.handleSubmitForm}>
-          <div>
+          <div className="Table-form">
             <label>Fullname</label>
-            <input
-              type="text"
-              name="fullname"
-              onChange={(e) => {
-                this.onChangeInput("fullname", e.target.value);
-              }}
-            />
-            {errorMessage.fullname != "" ? (
-              <div>{errorMessage.fullname}</div>
-            ) : (
-              <></>
-            )}
+            <div className="Input-Field">
+              <input
+                type="text"
+                name="fullname"
+                onChange={(e) => {
+                  this.onChangeInput("fullname", e.target.value);
+                }}
+              />
+              {errorMessage.fullname != "" ? (
+                <div className="errorMessage">{errorMessage.fullname}</div>
+              ) : (
+                <></>
+              )}
+            </div>
           </div>
-          <div>
+          <div className="Table-form">
             <label>Username</label>
-            <input
-              type="text"
-              name="username"
-              onChange={(e) => {
-                this.onChangeInput("username", e.target.value);
-              }}
-            />
-            {errorMessage.username != "" ? (
-              <div>{errorMessage.username}</div>
-            ) : (
-              <></>
-            )}
+            <div className="Input-Field">
+              <input
+                type="text"
+                name="username"
+                onChange={(e) => {
+                  this.onChangeInput("username", e.target.value);
+                }}
+              />
+              {errorMessage.username != "" ? (
+                <div className="errorMessage">{errorMessage.username}</div>
+              ) : (
+                <></>
+              )}
+            </div>
           </div>
-          <div>
+          <div className="Table-form">
             <label>Password</label>
-            <input
-              type="password"
-              name="password"
-              onChange={(e) => {
-                this.onChangeInput("password", e.target.value);
-              }}
-            />
-            {errorMessage.password != "" ? (
-              <div>{errorMessage.password}</div>
-            ) : (
-              <></>
-            )}
+            <div className="Input-Field">
+              <input
+                type="password"
+                name="password"
+                onChange={(e) => {
+                  this.onChangeInput("password", e.target.value);
+                }}
+              />
+              {errorMessage.password != "" ? (
+                <div className="errorMessage">{errorMessage.password}</div>
+              ) : (
+                <></>
+              )}
+            </div>
           </div>
-          <div>
+          <div className="Table-form">
             <label>Password confirm</label>
-            <input
-              type="password"
-              name="passwordConfirm"
-              onChange={(e) => {
-                this.onChangeInput("passwordConfirm", e.target.value);
-              }}
-            />
-            {errorMessage.passwordConfirm != "" ? (
-              <div>{errorMessage.passwordConfirm}</div>
-            ) : (
-              <></>
-            )}
+            <div className="Input-Field">
+              <input
+                type="password"
+                name="passwordConfirm"
+                onChange={(e) => {
+                  this.onChangeInput("passwordConfirm", e.target.value);
+                }}
+              />
+              {errorMessage.passwordConfirm != "" ? (
+                <div className="errorMessage">
+                  {errorMessage.passwordConfirm}
+                </div>
+              ) : (
+                <></>
+              )}
+            </div>
           </div>
           <div>
-            <input type="submit" />
+            <input value={"Submit"} type="submit" className="SubmitButton" />
           </div>
         </form>
       </>
